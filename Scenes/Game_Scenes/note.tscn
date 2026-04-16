@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bnwr0ixexxykx"]
+
+[ext_resource type="Texture2D" uid="uid://nxxy8n8p0agl" path="res://Assets/Sprites/arrow_down_note.png" id="1_p72ly"]
+[ext_resource type="Script" uid="uid://c7am4a51wokx0" path="res://Scenes/Scripts/note.gd" id="2_p72ly"]
+[ext_resource type="Texture2D" uid="uid://bnw3ftoqqbicp" path="res://Assets/Sprites/particle_texture.png" id="3_85erj"]
+[ext_resource type="Material" uid="uid://cjnqus62tvs8d" path="res://Assets/Shaders/note_particles.tres" id="4_mnjcn"]
+
+[node name="note" type="Sprite2D" unique_id=251324731]
+texture = ExtResource("1_p72ly")
+script = ExtResource("2_p72ly")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=298654068]
+show_behind_parent = true
+texture = ExtResource("3_85erj")
+process_material = ExtResource("4_mnjcn")

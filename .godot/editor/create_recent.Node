@@ -1,0 +1,12 @@
+TextureButton
+Node2D
+AudioStreamPlayer
+AudioStreamPlayer2D
+MidiPlayer
+CanvasLayer
+GPUParticles2D
+Label
+Line2D
+Sprite2D
+Parallax2D
+ColorRect

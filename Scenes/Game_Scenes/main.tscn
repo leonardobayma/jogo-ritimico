@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://b02xnke21jbee"]
+
+[ext_resource type="Script" uid="uid://xm47xnkyovau" path="res://Scenes/Scripts/music_player.gd" id="1_h45ro"]
+[ext_resource type="Script" uid="uid://bf1vnufu7na6x" path="res://addons/midi/MidiPlayer.gd" id="2_7pe2h"]
+[ext_resource type="AudioStream" uid="uid://bs3aqxy3pxdy1" path="res://Assets/Sounds/rhythm_tut.mp3" id="3_jv74g"]
+[ext_resource type="Script" uid="uid://b82gpyofwbhm2" path="res://Scenes/Scripts/player_manager.gd" id="4_jv74g"]
+[ext_resource type="PackedScene" uid="uid://by54w3w3h7uwk" path="res://Scenes/Game_Scenes/feedback.tscn" id="4_vlmg3"]
+[ext_resource type="Texture2D" uid="uid://bdmfor3n18olo" path="res://Assets/Sprites/arrow_up_button.png" id="5_1trrt"]
+[ext_resource type="Texture2D" uid="uid://c3jk4tq0gt2vq" path="res://Assets/Sprites/arrow_down_button.png" id="6_2503d"]
+[ext_resource type="Texture2D" uid="uid://cepdv5toisxvo" path="res://Assets/Sprites/arrow_right_button.png" id="7_nkbqg"]
+[ext_resource type="Texture2D" uid="uid://nae4rmj1ffqj" path="res://Assets/Sprites/arrow_left_button.png" id="8_vlmg3"]
+
+[node name="Main" type="Node2D" unique_id=379303414]
+
+[node name="MusicManager" type="Node2D" parent="." unique_id=1288487140 node_paths=PackedStringArray("midi_player", "mp3_player")]
+script = ExtResource("1_h45ro")
+midi_player = NodePath("MidiPlayer")
+mp3_player = NodePath("AudioStreamPlayer")
+
+[node name="MidiPlayer" type="Node" parent="MusicManager" unique_id=1475948050]
+script = ExtResource("2_7pe2h")
+file = "res://Assets/Sounds/rhythm_tut.mid"
+metadata/_custom_type_script = "uid://bf1vnufu7na6x"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MusicManager" unique_id=1371667985]
+stream = ExtResource("3_jv74g")
+
+[node name="FeedbackContainer" type="Node2D" parent="." unique_id=262686237]
+
+[node name="Feedback" parent="FeedbackContainer" unique_id=1094894255 instance=ExtResource("4_vlmg3")]
+
+[node name="Player_1" type="Node2D" parent="." unique_id=607119837 node_paths=PackedStringArray("music_player", "notes_container", "up_buttons", "down_buttons", "left_buttons", "right_buttons")]
+script = ExtResource("4_jv74g")
+music_player = NodePath("../MusicManager")
+notes_container = NodePath("NotesContainer")
+up_buttons = NodePath("InputContainer/UpButton")
+down_buttons = NodePath("InputContainer/DownButton")
+left_buttons = NodePath("InputContainer/LeftButton")
+right_buttons = NodePath("InputContainer/RightButton")
+player_number = 1
+leftc = "1-l"
+rightc = "1-r"
+upc = "1-u"
+downc = "1-d"
+
+[node name="NotesContainer" type="Node2D" parent="Player_1" unique_id=2024646480]
+
+[node name="InputContainer" type="Node2D" parent="Player_1" unique_id=1267422150]
+
+[node name="UpButton" type="TextureButton" parent="Player_1/InputContainer" unique_id=167573729]
+offset_left = 312.0
+offset_top = 247.0
+offset_right = 352.0
+offset_bottom = 287.0
+texture_normal = ExtResource("5_1trrt")
+
+[node name="DownButton" type="TextureButton" parent="Player_1/InputContainer" unique_id=159318340]
+offset_left = 362.0
+offset_top = 247.0
+offset_right = 402.0
+offset_bottom = 287.0
+texture_normal = ExtResource("6_2503d")
+
+[node name="RightButton" type="TextureButton" parent="Player_1/InputContainer" unique_id=646238232]
+offset_left = 411.0
+offset_top = 248.0
+offset_right = 451.0
+offset_bottom = 288.0
+texture_normal = ExtResource("7_nkbqg")
+
+[node name="LeftButton" type="TextureButton" parent="Player_1/InputContainer" unique_id=2050646104]
+offset_left = 261.0
+offset_top = 244.0
+offset_right = 301.0
+offset_bottom = 284.0
+texture_normal = ExtResource("8_vlmg3")
+
+[connection signal="received_note" from="MusicManager" to="Player_1" method="receive_note_event"]
+[connection signal="finished" from="MusicManager/MidiPlayer" to="MusicManager" method="_on_midi_player_finished"]
+[connection signal="midi_event" from="MusicManager/MidiPlayer" to="MusicManager" method="_on_midi_player_midi_event"]

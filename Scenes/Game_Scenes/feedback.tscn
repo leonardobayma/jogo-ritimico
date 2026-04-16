@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://by54w3w3h7uwk"]
+
+[ext_resource type="Script" uid="uid://c8u4s5ymy7v84" path="res://Scenes/Scripts/feedback.gd" id="1_dxqp5"]
+[ext_resource type="FontFile" uid="uid://duj2mbtfmuruy" path="res://Assets/Fonts/upheavtt.ttf" id="2_dbaai"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4kmrv"]
+font = ExtResource("2_dbaai")
+font_size = 20
+font_color = Color(0.6542321, 0.6542321, 0.654232, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rfpp7"]
+font = ExtResource("2_dbaai")
+font_size = 20
+
+[node name="Feedback" type="Node2D" unique_id=1094894255]
+script = ExtResource("1_dxqp5")
+
+[node name="BackgroundLabel" type="Label" parent="." unique_id=581621327]
+offset_left = -91.0
+offset_top = -12.0
+offset_right = 97.0
+offset_bottom = 11.0
+text = "Perfect"
+label_settings = SubResource("LabelSettings_4kmrv")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1778367746]
+offset_left = -90.0
+offset_top = -11.0
+offset_right = 98.0
+offset_bottom = 12.0
+text = "Perfect"
+label_settings = SubResource("LabelSettings_rfpp7")
+horizontal_alignment = 1

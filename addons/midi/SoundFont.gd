@@ -268,7 +268,6 @@ func _check_header( input:StreamPeerBuffer, hdr:String ) -> void:
 	var chk = input.get_string( 4 )
 	if hdr != chk:
 		print( "Doesn't exist " + hdr + " header" )
-		breakpoint
 
 ## チャンク読み込み
 ## @param	input			ストリーム
