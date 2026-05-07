@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bkm6n0y2mx4ji"]
+
+[ext_resource type="FontFile" uid="uid://duj2mbtfmuruy" path="res://Assets/Fonts/upheavtt.ttf" id="1_xcph6"]
+[ext_resource type="Script" uid="uid://cs0vr84mdp2no" path="res://Scenes/Scripts/score.gd" id="2_yex17"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rfpp7"]
+font = ExtResource("1_xcph6")
+font_size = 20
+
+[node name="Score" type="Node2D" unique_id=1774157089]
+script = ExtResource("2_yex17")
+
+[node name="Label" type="Label" parent="." unique_id=533977041]
+offset_left = -90.0
+offset_top = -11.0
+offset_right = 98.0
+offset_bottom = 12.0
+text = "0"
+label_settings = SubResource("LabelSettings_rfpp7")
+horizontal_alignment = 1

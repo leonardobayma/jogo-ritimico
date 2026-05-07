@@ -1,0 +1,3 @@
+res://Scenes/Game_Scenes/main.tscn
+res://Scenes/Scripts/player_manager.gd
+res://Scenes/Game_Scenes/score.tscn
