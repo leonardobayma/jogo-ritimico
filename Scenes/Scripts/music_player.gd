@@ -72,11 +72,20 @@ func _process(delta: float) -> void:
 	if changing_music:
 		if !midi_player.playing:
 			midi_player.file = next_music[0]
+			if midi_player.play_speed > 1.8:
+				midi_player.play_speed = 1
+			else:
+				midi_player.play_speed = snapped(midi_player.play_speed + .2, 0.1)
 			midi_player.play()
 
 		if delta_sum >= (TIMING_OFFSET + prev_ending_time):
 			mp3_player.stream = load(next_music[1])
 			mp3_player.play(0.0)
+			print(mp3_player.pitch_scale)
+			if mp3_player.pitch_scale > 1.8:
+				mp3_player.pitch_scale = 1
+			else:
+				mp3_player.pitch_scale = snapped(mp3_player.pitch_scale + 0.2, 0.1)
 			changing_music = false
 
 func start_music():
@@ -96,7 +105,6 @@ func pause_music():
 func _on_midi_player_midi_event(channel: Variant, event: Variant) -> void:
 	if event.type == SMF.MIDIEventType.note_on:
 		var note_data: Dictionary = notes.get(event.note)
-		print("para enviar")
 		if note_data:
 			received_note.emit(event.note)
 		else:

@@ -80,7 +80,6 @@ func _process(delta):
 
 
 func receive_note_event(id: int):
-	print("chegou")
 	var note_data: Dictionary = notes.get(id)
 	if note_data:
 		var note = NOTE_SCENE.instantiate()
@@ -89,7 +88,6 @@ func receive_note_event(id: int):
 		match note_data["button"]:
 			"up":
 				note.global_position = up_buttons.global_position + BUTTON_SPAWN_OFFSET - Vector2(0, NOTE_Y_OFFSET)
-				print("cima")
 			"down":
 				note.global_position = down_buttons.global_position + BUTTON_SPAWN_OFFSET - Vector2(0, NOTE_Y_OFFSET)
 			"left":

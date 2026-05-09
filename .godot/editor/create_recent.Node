@@ -1,3 +1,9 @@
+VBoxContainer
+CenterContainer
+HBoxContainer
+TextureRect
+Control
+MarginContainer
 Label
 TextureButton
 Node2D
@@ -6,7 +12,3 @@ AudioStreamPlayer2D
 MidiPlayer
 CanvasLayer
 GPUParticles2D
-Line2D
-Sprite2D
-Parallax2D
-ColorRect

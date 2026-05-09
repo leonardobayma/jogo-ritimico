@@ -13,6 +13,9 @@ const FEEDBACK_SCENE = preload("res://Scenes/Game_Scenes/feedback.tscn");
 
 func _process(delta: float) -> void:
  update_displayed_points()
+ if Input.is_action_just_pressed("aa"):
+  p1_points =0;
+  p2_points = 0;
 
 func update_points(type: TimingJudgement, player: int):
  match(type):
@@ -34,10 +37,8 @@ func update_points(type: TimingJudgement, player: int):
  
  if player == 1:
    p1_points += points;
-   print("player 1: ", p1_points)
  elif player == 2:
    p2_points += points;
-   print("player 2: ", p2_points)
  points = 0
 
 func update_displayed_points() -> void:

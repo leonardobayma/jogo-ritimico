@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cepdv5toisxvo" path="res://Assets/Sprites/arrow_right_button.png" id="7_nkbqg"]
 [ext_resource type="Texture2D" uid="uid://nae4rmj1ffqj" path="res://Assets/Sprites/arrow_left_button.png" id="8_vlmg3"]
 [ext_resource type="PackedScene" uid="uid://bkm6n0y2mx4ji" path="res://Scenes/Game_Scenes/score.tscn" id="10_2r6j5"]
+[ext_resource type="Texture2D" uid="uid://confff012w8wx" path="res://Assets/Sprites/WhatsApp Image 2026-05-07 at 19.16.59.jpeg" id="11_fxojc"]
 
 [node name="Main" type="Node2D" unique_id=379303414]
 
@@ -141,6 +142,11 @@ player_number = 2
 
 [node name="Label" parent="Player_2/Score" index="0" unique_id=533977041]
 metadata/_edit_use_anchors_ = true
+
+[node name="WhatsAppImage20260507At19_16_59" type="Sprite2D" parent="." unique_id=209767449]
+position = Vector2(110, 249)
+scale = Vector2(0.114999995, 0.114999995)
+texture = ExtResource("11_fxojc")
 
 [connection signal="received_note" from="MusicManager" to="Player_1" method="receive_note_event"]
 [connection signal="received_note" from="MusicManager" to="Player_2" method="receive_note_event"]
