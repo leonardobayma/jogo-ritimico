@@ -1,8 +1,12 @@
 extends Control
 @export var text: Label
+@export var p1: Label
+@export var p2: Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	p1.text = "J1 = " + str(Highscore.p1_points)
+	p2.text = "J2 = " + str(Highscore.p2_points)
 	if Highscore.p1_points == Highscore.p2_points:
 		text.text = "EMPATE"
 		print("EMPATE")

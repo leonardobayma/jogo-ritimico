@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d27xf5myknk0p" path="res://Scenes/Game_Scenes/final.gd" id="1_26mb3"]
 [ext_resource type="Theme" uid="uid://ba8c454jkwydn" path="res://Assets/Themes/new_theme.tres" id="2_hrgkd"]
 
-[node name="Menu" type="Control" unique_id=665144213 node_paths=PackedStringArray("text")]
+[node name="Menu" type="Control" unique_id=665144213 node_paths=PackedStringArray("text", "p1", "p2")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,6 +12,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_26mb3")
 text = NodePath("CenterContainer/VSplitContainer/CenterContainer/Label")
+p1 = NodePath("CenterContainer/VSplitContainer/HSplitContainer/j1")
+p2 = NodePath("CenterContainer/VSplitContainer/HSplitContainer/j2")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1682189244]
 layout_mode = 1
@@ -32,6 +34,8 @@ grow_vertical = 2
 
 [node name="VSplitContainer" type="VSplitContainer" parent="CenterContainer" unique_id=892781454]
 layout_mode = 2
+split_offsets = PackedInt32Array(90, 102)
+split_offset = 90
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VSplitContainer" unique_id=889957401]
 layout_mode = 2
@@ -41,6 +45,23 @@ layout_mode = 2
 theme = ExtResource("2_hrgkd")
 theme_override_font_sizes/font_size = 100
 text = "teste"
+
+[node name="HSplitContainer" type="HSplitContainer" parent="CenterContainer/VSplitContainer" unique_id=1047506291]
+layout_mode = 2
+
+[node name="j1" type="Label" parent="CenterContainer/VSplitContainer/HSplitContainer" unique_id=1989693936]
+layout_mode = 2
+theme = ExtResource("2_hrgkd")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="j2" type="Label" parent="CenterContainer/VSplitContainer/HSplitContainer" unique_id=306860809]
+layout_mode = 2
+theme = ExtResource("2_hrgkd")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="CenterContainer/VSplitContainer" unique_id=750315122]
 layout_mode = 2

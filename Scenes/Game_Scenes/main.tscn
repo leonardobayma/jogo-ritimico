@@ -44,7 +44,7 @@ centered = false
 script = ExtResource("1_h45ro")
 midi_player = NodePath("MidiPlayer")
 mp3_player = NodePath("AudioStreamPlayer")
-rod = 1
+rod = 4
 
 [node name="MidiPlayer" type="Node" parent="MusicManager" unique_id=1475948050]
 script = ExtResource("2_7pe2h")

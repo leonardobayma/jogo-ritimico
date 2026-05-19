@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://eu52mfo3hmc3" path="res://Scenes/Scripts/menu.gd" id="1_sflaq"]
 [ext_resource type="Theme" uid="uid://ba8c454jkwydn" path="res://Assets/Themes/new_theme.tres" id="2_guc6e"]
+[ext_resource type="AudioStream" uid="uid://d4cv0l5d5fu0c" path="res://Assets/Sounds/break03.ogg" id="3_gmw8k"]
 
 [node name="menu" type="Control" unique_id=1844591374]
 layout_mode = 3
@@ -33,5 +34,10 @@ grow_vertical = 2
 layout_mode = 2
 theme = ExtResource("2_guc6e")
 text = "JOGAR"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1281919581]
+stream = ExtResource("3_gmw8k")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="CenterContainer/Button" to="." method="_on_button_pressed"]
