@@ -1,64 +1,37 @@
 [gd_scene format=3 uid="uid://ba335vtg2lpgj"]
 
-[ext_resource type="Texture2D" uid="uid://csdscqrperkux" path="res://Assets/main_menu/title.png" id="1_m0klg"]
-[ext_resource type="Texture2D" uid="uid://ds3cib6q86xmi" path="res://Assets/main_menu/label_new_game.png" id="2_fri8p"]
-[ext_resource type="Texture2D" uid="uid://b1lcaictb4f67" path="res://Assets/main_menu/label_continue.png" id="3_0nosj"]
-[ext_resource type="Texture2D" uid="uid://d4lvppssmdjri" path="res://Assets/main_menu/label_options.png" id="4_v07ht"]
-[ext_resource type="Texture2D" uid="uid://berct82gr6jll" path="res://Assets/main_menu/version.png" id="5_0shga"]
-[ext_resource type="Texture2D" uid="uid://b2g6gv0rix61m" path="res://Assets/main_menu/characters.png" id="6_otfn4"]
+[ext_resource type="Script" uid="uid://eu52mfo3hmc3" path="res://Scenes/Scripts/menu.gd" id="1_sflaq"]
+[ext_resource type="Theme" uid="uid://ba8c454jkwydn" path="res://Assets/Themes/new_theme.tres" id="2_guc6e"]
 
-[node name="MarginContainer" type="MarginContainer" unique_id=1166918341]
+[node name="menu" type="Control" unique_id=1844591374]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 120
-theme_override_constants/margin_top = 80
-theme_override_constants/margin_right = 120
-theme_override_constants/margin_bottom = 80
+script = ExtResource("1_sflaq")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=29443769]
-layout_mode = 2
+[node name="ColorRect" type="ColorRect" parent="." unique_id=481088937]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7137255, 0.3254902, 0.48235294, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=645467]
-layout_mode = 2
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=937250062]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Logo" type="TextureRect" parent="HBoxContainer/VBoxContainer" unique_id=890915579]
+[node name="Button" type="Button" parent="CenterContainer" unique_id=1666512289]
 layout_mode = 2
-texture = ExtResource("1_m0klg")
-stretch_mode = 2
+theme = ExtResource("2_guc6e")
+text = "JOGAR"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=151399335]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 30
-alignment = 1
-
-[node name="New Game" type="TextureRect" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=923466639]
-layout_mode = 2
-texture = ExtResource("2_fri8p")
-stretch_mode = 2
-
-[node name="Continue" type="TextureRect" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1577611369]
-layout_mode = 2
-texture = ExtResource("3_0nosj")
-stretch_mode = 2
-
-[node name="Options" type="TextureRect" parent="HBoxContainer/VBoxContainer/VBoxContainer" unique_id=1973653978]
-layout_mode = 2
-texture = ExtResource("4_v07ht")
-stretch_mode = 2
-
-[node name="Version" type="TextureRect" parent="HBoxContainer/VBoxContainer" unique_id=1944728862]
-layout_mode = 2
-texture = ExtResource("5_0shga")
-stretch_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer" unique_id=1483675112]
-layout_mode = 2
-
-[node name="Personagens" type="TextureRect" parent="HBoxContainer/CenterContainer" unique_id=1509769363]
-layout_mode = 2
-texture = ExtResource("6_otfn4")
-stretch_mode = 2
+[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_button_pressed"]

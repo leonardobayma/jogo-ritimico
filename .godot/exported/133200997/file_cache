@@ -1,6 +1,10 @@
-res://addons/midi/ADSR.tscn::125735282cb3d52f1c7cc725c9a636a9::1772138881::res://.godot/exported/133200997/export-0ee189c91e04ec00d92a2c5122b5ca0e-ADSR.scn
-res://addons/midi/MidiPlayer.tscn::6c6dfe7671c4a67084fafd16fea8c6c4::1772138881::res://.godot/exported/133200997/export-a4b4dc1118a6a8443a861d8fd286790e-MidiPlayer.scn
-res://rhythm_game_assets/assets/note_particles.tres::1c47b2e6add37ee30584fb0dd9de00c7::1772136899::res://.godot/exported/133200997/export-47bd2ea991160f2c25a1f1b01f21a180-note_particles.res
-res://Scenes/main.tscn::332c01e4773bdc56eb31bb395736c1b6::1773521560::res://.godot/exported/133200997/export-2ddd04d543d5858e7f20c9299a8b5096-main.scn
-res://Scenes/note.tscn::7a648a1c7b608f1f85ee9749d2f18682::1773460490::res://.godot/exported/133200997/export-c6b7d12f518698218838dbfbcd2adfc6-note.scn
-res://Scenes/feedback.tscn::7228034f8171d89e3acc685ced5c4af2::1773522203::res://.godot/exported/133200997/export-2fc15a7777b46f50aebfd5f0a24dc879-feedback.scn
+res://addons/midi/ADSR.tscn::125735282cb3d52f1c7cc725c9a636a9::1777568695::res://.godot/exported/133200997/export-0ee189c91e04ec00d92a2c5122b5ca0e-ADSR.scn
+res://addons/midi/MidiPlayer.tscn::6c6dfe7671c4a67084fafd16fea8c6c4::1777568695::res://.godot/exported/133200997/export-a4b4dc1118a6a8443a861d8fd286790e-MidiPlayer.scn
+res://Assets/Shaders/note_particles.tres::1c47b2e6add37ee30584fb0dd9de00c7::1777568695::res://.godot/exported/133200997/export-2d6d589e54fec3964403ed7102285cab-note_particles.res
+res://Scenes/Game_Scenes/feedback.tscn::f496ceaaa3fd1658e01deea09408b9a1::1777568695::res://.godot/exported/133200997/export-a3be2cfb5e3c043f8b2fecc5c82be16d-feedback.scn
+res://Scenes/Game_Scenes/final.tscn::70daea33010aae4bf7ba79e6e40f83fb::1779181901::res://.godot/exported/133200997/export-039ed7eee9c329500b6b7ccc784c883f-final.scn
+res://Scenes/Game_Scenes/main.tscn::8095d20a26833d77400ffd112ae415d9::1779177683::res://.godot/exported/133200997/export-ad6d2879a1726c813faead2c67123057-main.scn
+res://Scenes/Game_Scenes/menu.tscn::aa0cdf4407d6cdcf630a13946d440c7b::1779181373::res://.godot/exported/133200997/export-e4aae385ab307321182e26c8832de373-menu.scn
+res://Scenes/Game_Scenes/music_player.tscn::9a9d70139a33cfb37c778d1b554c4326::1777568695::res://.godot/exported/133200997/export-bfbc77e8a072c9a76bf5ae20509ea01c-music_player.scn
+res://Scenes/Game_Scenes/note.tscn::282719689c1b4c2efd387160c5085553::1777568695::res://.godot/exported/133200997/export-8fcd6bdee27f8fd839250fe6f94018a5-note.scn
+res://Scenes/Game_Scenes/score.tscn::840f91f6bc08912198ad4390c8824044::1778192858::res://.godot/exported/133200997/export-947239870cc4948703c339782ba7d064-score.scn

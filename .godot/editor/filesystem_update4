@@ -1,5 +1,3 @@
+res://Scenes/Game_Scenes/final.tscn
 res://Scenes/Game_Scenes/menu.tscn
-res://Scenes/Scripts/music_player.gd
-res://Scenes/Scripts/Highscore.gd
-res://Scenes/Scripts/player_manager.gd
-res://Scenes/Game_Scenes/main.tscn
+res://Scenes/Game_Scenes/final.gd

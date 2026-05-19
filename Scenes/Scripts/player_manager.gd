@@ -17,7 +17,7 @@ extends Node2D
 
 const NOTE_SCENE = preload("res://Scenes/Game_Scenes/note.tscn")
 const BUTTON_SPAWN_OFFSET := Vector2(16, 16)
-const NOTE_Y_OFFSET := 400
+const NOTE_Y_OFFSET := 500
 const FALLING_SPEED_SCALE := 0.5 
 const TIMING_OFFSET := (1.0/FALLING_SPEED_SCALE)
 

@@ -10,6 +10,10 @@ var next_music
 var changing_music
 var delta_sum := 0.0
 var prev_ending_time
+@export var rod: int = 3
+var it: int = 0
+
+var end_musix: bool = false
 
 const FALLING_SPEED_SCALE := 0.5 
 const TIMING_OFFSET := (1.0/FALLING_SPEED_SCALE)
@@ -65,8 +69,13 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	delta_sum += delta
-	if delta_sum >= TIMING_OFFSET and not mp3_player.playing:
+	if delta_sum >= TIMING_OFFSET and not mp3_player.playing and not end_musix:
 		mp3_player.play()
+		
+	if end_musix:
+		if !mp3_player.playing:
+			get_tree().change_scene_to_file("res://Scenes/Game_Scenes/final.tscn")
+			
 
 
 	if changing_music:
@@ -81,7 +90,6 @@ func _process(delta: float) -> void:
 		if delta_sum >= (TIMING_OFFSET + prev_ending_time):
 			mp3_player.stream = load(next_music[1])
 			mp3_player.play(0.0)
-			print(mp3_player.pitch_scale)
 			if mp3_player.pitch_scale > 1.8:
 				mp3_player.pitch_scale = 1
 			else:
@@ -96,7 +104,8 @@ func set_next_music(midi_path: String, mp3_path: String):
 	next_music = [midi_path, mp3_path]
 
 func music_has_ended_emmiter():
-	music_has_ended.emit()
+	print("carregar score")
+	get_tree().change_scene_to_file("res://Scenes/Game_Scenes/final.tscn")
 
 func pause_music():
 	midi_player.pause()
@@ -118,4 +127,8 @@ func change_music():
 	changing_music = true
 
 func _on_midi_player_finished() -> void:
-	change_music()
+	if rod > it:
+		it += 1
+		change_music()
+	else:
+		end_musix = true

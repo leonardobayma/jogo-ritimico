@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Rythm Game (edgy)"
-run/main_scene="uid://b02xnke21jbee"
+config/name="A batalha do seculo"
+run/main_scene="uid://ba335vtg2lpgj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
