@@ -2,9 +2,10 @@ res://addons/midi/ADSR.tscn::125735282cb3d52f1c7cc725c9a636a9::1777568695::res:/
 res://addons/midi/MidiPlayer.tscn::6c6dfe7671c4a67084fafd16fea8c6c4::1777568695::res://.godot/exported/133200997/export-a4b4dc1118a6a8443a861d8fd286790e-MidiPlayer.scn
 res://Assets/Shaders/note_particles.tres::1c47b2e6add37ee30584fb0dd9de00c7::1777568695::res://.godot/exported/133200997/export-2d6d589e54fec3964403ed7102285cab-note_particles.res
 res://Scenes/Game_Scenes/feedback.tscn::f496ceaaa3fd1658e01deea09408b9a1::1777568695::res://.godot/exported/133200997/export-a3be2cfb5e3c043f8b2fecc5c82be16d-feedback.scn
-res://Scenes/Game_Scenes/final.tscn::70daea33010aae4bf7ba79e6e40f83fb::1779181901::res://.godot/exported/133200997/export-039ed7eee9c329500b6b7ccc784c883f-final.scn
+res://Scenes/Game_Scenes/final.tscn::48a5edadad17a52f3f526e8252b30270::1779213199::res://.godot/exported/133200997/export-039ed7eee9c329500b6b7ccc784c883f-final.scn
 res://Scenes/Game_Scenes/main.tscn::8095d20a26833d77400ffd112ae415d9::1779177683::res://.godot/exported/133200997/export-ad6d2879a1726c813faead2c67123057-main.scn
-res://Scenes/Game_Scenes/menu.tscn::aa0cdf4407d6cdcf630a13946d440c7b::1779181373::res://.godot/exported/133200997/export-e4aae385ab307321182e26c8832de373-menu.scn
+res://Scenes/Game_Scenes/menu.tscn::d4be34f97fe9c50868fb4ffe6d311d17::1779213149::res://.godot/exported/133200997/export-e4aae385ab307321182e26c8832de373-menu.scn
 res://Scenes/Game_Scenes/music_player.tscn::9a9d70139a33cfb37c778d1b554c4326::1777568695::res://.godot/exported/133200997/export-bfbc77e8a072c9a76bf5ae20509ea01c-music_player.scn
 res://Scenes/Game_Scenes/note.tscn::282719689c1b4c2efd387160c5085553::1777568695::res://.godot/exported/133200997/export-8fcd6bdee27f8fd839250fe6f94018a5-note.scn
 res://Scenes/Game_Scenes/score.tscn::840f91f6bc08912198ad4390c8824044::1778192858::res://.godot/exported/133200997/export-947239870cc4948703c339782ba7d064-score.scn
+res://Assets/Themes/new_theme.tres::8f91b6208a27e6265b3174791e6138ef::1779212101::res://.godot/exported/133200997/export-2b98eab23142d9896d9be9acbe2ebf65-new_theme.res
