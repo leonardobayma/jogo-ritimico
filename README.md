@@ -89,6 +89,18 @@ Implementação do sistema de aceleração da música a cada loop, adicionando p
 
 ---
 
+## 🔮 Próximos Passos
+
+- 🎵 Adição de novas músicas
+- 🕹️ Novos modos de gameplay — a ideia é tornar cada partida única: a cada loop a música, a velocidade e o modo de jogo variam, criando uma experiência dinâmica e imprevisível
+- 🔧 Refatoração do código — tornar os módulos mais independentes entre si e permitir que o número de jogadores seja escolhido dinamicamente
+- 🚀 Publicação no [itch.io](https://itch.io) — para isso, alguns requisitos precisam ser atendidos antes do lançamento:
+  - Escolha de um nome definitivo para o jogo
+  - Personagens com animações, substituindo os sprites estáticos atuais
+  - Temática e história simples, mas elaborada
+
+---
+
 ## 📚 Referências
 
 - [Building a Rhythm Game in Godot — Sergej Moor](https://medium.com/@sergejmoor01/building-a-rhythm-game-in-godot-part-1-synchronizing-gameplay-with-music-258b0bcab458) — referência principal de desenvolvimento e alguns assets utilizados
