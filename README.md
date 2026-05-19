@@ -66,8 +66,11 @@ O projeto foi desenvolvido como parte da **Tech Week da Anhanguera**, uma compet
 
 ## 📅 Diário de Produção
 
+### 10/03/2026 — Configuração inicial do projeto
+Configuração do repositório, do `.gitignore` e integração do plugin **MIDI Player**. Os assets base também foram adicionados ao projeto nessa etapa.
+
 ### 13/03/2026 — Base do jogo
-Primeiro dia de desenvolvimento do jogo. Foi seguido um tutorial para estruturar a base, resultando nos componentes principais: **Game Manager**, **Score Manager**, **Inputs Manager** e **Midi Player**. Ainda restavam questões técnicas a resolver, como conectar dois pedaços de música para variar a dificuldade de forma incremental, e testar a sincronização do som com o input do jogador.
+Primeiro dia de desenvolvimento da mecânica. Foi seguido um tutorial para estruturar a base, resultando nos componentes principais: **Game Manager**, **Score Manager**, **Inputs Manager** e **Midi Player**. Ainda restavam questões técnicas a resolver, como conectar dois pedaços de música para variar a dificuldade de forma incremental, e testar a sincronização do som com o input do jogador.
 
 ### 14/03/2026 — Investigando a lógica de sincronização
 Foram investigados os detalhes do código de sincronização: a música MIDI começa a tocar e o sistema calcula o tempo até cada nota chegar na zona de clique, usando esse intervalo para iniciar o áudio. Foi identificado que sons tocados instantaneamente não ficavam perfeitamente em sincronia, o que virou um ponto de atenção para as próximas etapas.
@@ -81,11 +84,14 @@ Foi montada a cena base do jogo em conjunto. Com a estrutura principal pronta, o
 ### 16/04/2026 — Limpeza do projeto
 Remoção de todos os assets e cenas não utilizados, deixando o projeto mais organizado e limpo para a fase final.
 
-### 07/05/2026 — Finalização das artes
-Os assets visuais do jogo foram finalizados, concluindo a identidade visual do projeto.
+### 07/05/2026 — Organização da cena principal e finalização das artes
+A cena principal foi reorganizada e os assets visuais do jogo foram finalizados, concluindo a identidade visual do projeto.
 
 ### 09/05/2026 — Velocidade dinâmica
 Implementação do sistema de aceleração da música a cada loop, adicionando progressão de dificuldade à gameplay.
+
+### 19/05/2026 — Menus e documentação
+Adição dos menus de navegação do jogo e do menu de resultado de partida, além da finalização da documentação do projeto.
 
 ---
 
